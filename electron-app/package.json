@@ -1,0 +1,11 @@
+{
+    "name": "gm-manga-reader",
+    "version": "1.0.0",
+    "description": "An opensource cross-platform manga reader based on Electron",
+    "main": "index.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "Rajarshi Vaidya aka gmastergreatee",
+    "license": "MIT"
+}
