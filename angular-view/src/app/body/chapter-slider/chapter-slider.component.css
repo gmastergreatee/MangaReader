@@ -1,0 +1,77 @@
+#chap-view {
+    position: absolute;
+    top:39px;
+    bottom:0;
+    left:0;
+    width:300px;
+    transition: .20s all ease-in;
+    -webkit-transition: .20s all ease-in;
+    background-color: rgb(104, 104, 104);
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    color: white;
+    margin: 5px;
+    transition: .25s all ease-in;
+    -webkit-transition: .25s all ease-in;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.slider > .info {
+    color: rgb(218, 218, 218);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.lister {
+    border: 1px solid black;
+    padding: 5px;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.lister .chap-item {
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 2px;
+    background-color: rgb(80, 80, 80);
+    white-space: nowrap;
+    border-radius: 3px;
+}
+
+.lister .chap-item:hover {
+    background-color: rgb(143, 143, 143);
+    color: yellow;
+}
+
+.lister .chap-item.active {
+    background-color: rgb(175, 175, 175);
+    color: yellow;
+}
+
+#bottom-arrow-left {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 24px;
+    transition: .25s all ease-in;
+    -webkit-transition: .25s all ease-in;
+    padding: 10px 5px 5px 5px;
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(104, 104, 104);
+    cursor: pointer;
+    z-index: 1;
+}
+
+#bottom-arrow-left:hover {
+    background-color: rgb(126, 126, 126);
+}

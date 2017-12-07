@@ -1,0 +1,14 @@
+#img-view {
+    position: absolute;
+    transition: .20s all ease-in;
+    top: 42px;
+    left: 303px;
+    right: 3px;
+    bottom: 3px;
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+}
+
+.view-table {
+    height: 100px;
+}

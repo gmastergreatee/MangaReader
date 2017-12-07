@@ -1,0 +1,16 @@
+<div class="header">
+  <div id="AppName" class="appName">
+    MangaReader v1.0.0
+    <span style="color:yellow;white-space: nowrap;">{{ header != "" ? "(" + header + ")" : "" }}</span>
+  </div>
+  <div class="set-directory" title="{{tooltip}}" (click)="selectFolder()">
+    <img src="./assets/svgs/select-folder.svg">
+  </div>
+  <div class="set-directory" title="Click to toggle fullscreen" (click)="toggleFullscreen()">
+    <img src="./assets/svgs/full-screen.svg">
+  </div>
+  <div class="set-directory" title="Click to toggle image width/height mode" (click)="toggleWidthHeight()">
+    <img id="widthHeightImage" src="./assets/svgs/double-arrow-wide.svg" style="width:30px;">
+  </div>
+</div>
+<input type="file" webkitdirectory="./" id="sel-folder" style="display:none;">

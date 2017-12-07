@@ -1,0 +1,16 @@
+<div id="chap-view">
+  <div class="slider">
+    <div id="lister" class="lister" *ngIf="chapters.length > 0">
+      <div class="chap-item" [ngClass]="{'active': selectedImageId !== 0 && (selectedImageId >= chapter.startId && selectedImageId <= chapter.endId)}"
+        *ngFor="let chapter of chapters" title="Click to view {{chapter.getChapterName()}}" (click)="setImageId(chapter.startId)">
+        {{chapter.getChapterName()}}
+      </div>
+    </div>
+    <div class="info" *ngIf="chapters.length <= 0">
+      No manga selected
+    </div>
+  </div>
+  <div id="bottom-arrow-left" (click)="toggleChapterView()" title="{{hideShowButtonTitle}}">
+    <img src="./assets/svgs/arrow-left.svg" style="width:100%;">
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div id="img-view" [ngStyle]="{ 'overflowY': this.imgViewService.isHeightMode == true? 'hidden':'auto' }">
+    <span class="view-table" style="height:100%;margin:auto;" *ngIf="imageList.length > 0">
+        <img id="mainImage" (click)="doNothing()" [ngStyle]="{ 'height': this.imgViewService.isHeightMode == true? '100%':'auto', 'width': this.imgViewService.isHeightMode == false? '100%':'auto' }"
+            src="file:\\\{{selectedImage}}">
+    </span>
+    <span class="view-table" style="height:100%;margin:auto;color:yellow;font-size:24px;" *ngIf="imageList.length <= 0">
+        <br>
+        <br>
+        <br>
+        <strong style="margin-top:50px;">No mangas selected. Please select a "Manga" Folder</strong>
+        <br>
+        <br>
+        <table style="border: 1px solid yellow;margin:auto;">
+            <tr>
+                <th colspan="2" style="padding:5px;text-align:left;">
+                    Required directory structure :-
+                </th>
+            </tr>
+            <tr>
+                <td style="padding:5px;text-align:left;">
+                    -
+                </td>
+                <td style="padding:5px;text-align:left;">
+                    Main "Manga" folder
+                    <span style="color:rgb(255, 136, 0);">[Select this one]</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:5px;text-align:left;">
+                    -
+                </td>
+                <td style="padding:5px;text-align:left;">
+                    &nbsp;&nbsp;&nbsp;Chapters...
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:5px;text-align:left;">
+                    -
+                </td>
+                <td style="padding:5px;text-align:left;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image Files(*.png,*.jpg/*.jpeg,*.bmp,*.svg)
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <b>Previous Image: Left Arrow</b>
+        <br>
+        <b>Next Image: Right Arrow</b>
+    </span>
+</div>
