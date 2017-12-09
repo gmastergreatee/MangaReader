@@ -19,9 +19,11 @@ app.on('ready', () => {
 ipcMain.on('app:fullscreen:toggle', (event) => {
     if (mainWindow.isFullScreen()) {
         mainWindow.setFullScreen(false);
+        BuildMainMenu();
     }
     else {
         mainWindow.setFullScreen(true);
+        DestroyMainMenu();
     }
 });
 
@@ -79,8 +81,27 @@ function InitializeWindow() {
  * Builds & renders the main window's Menubar
  */
 function BuildMainMenu() {
-    if (!developmentMode) {
-        mainMenuTemplate = [];
+    let mainMenuTemplate = [];
+    if (developmentMode) {
+        mainMenuTemplate = [{
+            label: 'View',
+            submenu: [
+                { role: 'reload' },
+                { role: 'forcereload' },
+                { role: 'toggledevtools' },
+                { type: 'separator' },
+                { role: 'resetzoom' },
+                { role: 'zoomin' },
+                { role: 'zoomout' },
+                { type: 'separator' },
+                { role: 'togglefullscreen' },
+                { type: 'separator' },
+                {
+                    role: 'quit',
+                    accelerator: process.platform === 'darwin' ? 'Command+Q' : 'Ctrl+Q'
+                }
+            ]
+        }]
     }
 
     if (process.platform === 'darwin') {
@@ -112,34 +133,18 @@ function BuildMainMenu() {
 }
 
 /**
+ * Destroys the main-menu
+ */
+function DestroyMainMenu() {
+    Menu.setApplicationMenu(null);
+}
+
+/**
  * Opens the developer's page in the default browser
  */
 function OpenDeveloperPage() {
     electron.shell.openExternal('https://github.com/gmastergreatee');
 }
-
-/**
- * The raw main-menu template
- */
-let mainMenuTemplate = [{
-    label: 'View',
-    submenu: [
-        { role: 'reload' },
-        { role: 'forcereload' },
-        { role: 'toggledevtools' },
-        { type: 'separator' },
-        { role: 'resetzoom' },
-        { role: 'zoomin' },
-        { role: 'zoomout' },
-        { type: 'separator' },
-        { role: 'togglefullscreen' },
-        { type: 'separator' },
-        {
-            role: 'quit',
-            accelerator: process.platform === 'darwin' ? 'Command+Q' : 'Ctrl+Q'
-        }
-    ]
-}]
 
 var allChapters = new Array();
 
