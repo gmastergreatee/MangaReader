@@ -26,11 +26,12 @@ This manga reader features :-
 
 Please check the [release](https://github.com/gmastergreatee/MangaReader/releases) page.
 
-## Custom Build
+## Custom Build (Preferred way of downloading)
 
 To create a custom build of the project :-
 
 - download the latest build of electron from [here](https://github.com/electron/electron/releases) for your operating system
+    - skip this step if you have already downloaded __any__ release version
 - download the latest version of "app.rar" from [here](https://github.com/gmastergreatee/MangaReader/releases)
 - extract the contents of electron build to any empty folder/directory of your choice
 - navigate to the resources folder of the extracted electron build & delete default_app.asar
