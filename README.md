@@ -1,5 +1,5 @@
 # MangaReader
-
+[![PayPal Donate](https://img.shields.io/badge/donate-PayPal-orange.svg?style=flat-square&logo=paypal)](https://www.paypal.me/RajarshiVaidya)
 ## Description
 
 Cross platform(`MacOS, Win, Linux`) simple manga-reader/photoviewer entirely tuned up for reading purposes
