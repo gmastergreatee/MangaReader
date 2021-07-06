@@ -11,7 +11,7 @@ Cross platform(`MacOS, Win, Linux`) simple manga-reader/photoviewer entirely tun
 
 ## Why I developed it
 
-I was highly frustated of other manga readers functionality of changing chapters. They required me to re-select the next chapter whenever I finished reading the current chapter(an excuse! lol). Most of the desktop manga readers are all outdated. I wanna keep this one updated. So please create an issue for any of features that you miss in this app. Contributing to the development will be a great help. For downloading any mangas, I prefer using [FMD](https://github.com/fmd-project-team/FMD)(Free Manga Downloader). You may use whatever you like.
+I was highly frustated of other manga readers functionality of changing chapters. They required me to re-select the next chapter whenever I finished reading the current chapter(an excuse! lol). Most of the desktop manga readers are all outdated. I wanna keep this one updated. So please create an issue for any of features that you miss in this app. Contributing to the development will be a great help. For downloading any mangas, I prefer using [FMD2](https://github.com/dazedcat19/FMD2)(Free Manga Downloader 2). You may use whatever you like.
 
 ## Highlights
 
